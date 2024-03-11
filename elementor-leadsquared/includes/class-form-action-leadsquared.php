@@ -120,6 +120,7 @@ class Class_Form_Action_LeadSquared extends \ElementorPro\Modules\Forms\Classes\
 				$url = sprintf(
 						"%s?accessKey=%s&secretKey=%s",
 						$leadsquared_settings['api_endpoint'],
+						"LeadManagement.svc/Lead.Capture",
 						urlencode($leadsquared_settings['access_key']),
 						urlencode($leadsquared_settings['secret_key'])
 				);
