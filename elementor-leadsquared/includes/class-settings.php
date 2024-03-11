@@ -153,13 +153,14 @@ class Class_Settings {
 	$leadsquared_settings = get_option('leadsquared_options');
 	$access_key = isset($leadsquared_settings['access_key']) ? $leadsquared_settings['access_key'] : '';
 	$secret_key = isset($leadsquared_settings['secret_key']) ? $leadsquared_settings['secret_key'] : '';
+	$api_endpoint = isset($leadsquared_settings['api_endpoint']) ? $leadsquared_settings['api_endpoint'] : '';
 
-	if (empty($access_key) || empty($secret_key)) {
+	if (empty($access_key) || empty($secret_key) || empty($api_endpoint) {
 			wp_send_json_error('LeadSquared Access Key or Secret Key is not set.');
 			return;
 	}
 
-	$response = wp_remote_get("https://api-in21.leadsquared.com/v2/LeadManagement.svc/LeadsMetaData.Get?accessKey={$access_key}&secretKey={$secret_key}");
+	$response = wp_remote_get("{$api_endpoint}/LeadManagement.svc/LeadsMetaData.Get?accessKey={$access_key}&secretKey={$secret_key}");
 
 	if (is_wp_error($response)) {
 			wp_send_json_error($response->get_error_message());
