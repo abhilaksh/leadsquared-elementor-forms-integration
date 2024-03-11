@@ -11,14 +11,14 @@ Installation:
 
 The field information right now is set up currently to accept:
 
-a) Field id or Field Shortcode
+1) Field id or Field Shortcode
 
-b) Any other shortcode, 
+2) Any other shortcode, 
 
-c) Any dynamic tag,
+3) Any dynamic tag,
 
-d) 'FORM_NAME' (without quotes) to input the current form's name
+4) 'FORM_NAME' (without quotes) to input the current form's name
 
-e) Any string of text
+5) Any string of text
 
 Good luck! 
