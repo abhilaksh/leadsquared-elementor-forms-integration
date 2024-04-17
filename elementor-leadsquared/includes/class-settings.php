@@ -155,7 +155,7 @@ class Class_Settings {
 	$secret_key = isset($leadsquared_settings['secret_key']) ? $leadsquared_settings['secret_key'] : '';
 	$api_endpoint = isset($leadsquared_settings['api_endpoint']) ? $leadsquared_settings['api_endpoint'] : '';
 
-	if (empty($access_key) || empty($secret_key) || empty($api_endpoint) {
+	if (empty($access_key) || empty($secret_key) || empty($api_endpoint)) {
 			wp_send_json_error('LeadSquared Access Key or Secret Key is not set.');
 			return;
 	}
